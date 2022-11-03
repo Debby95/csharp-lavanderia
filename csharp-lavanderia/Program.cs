@@ -17,7 +17,7 @@
 
 using System;
 
-Lavatrice lavatrice = new Lavatrice();
+Lavanderia lavanderia = new Lavanderia();
 public class Lavatrice
 {
     public string nome { get; set; }
@@ -25,5 +25,25 @@ public class Lavatrice
     public int tempo { get; set; }
     public string detersivo { get; set; }
     public string ammorbidente { get; set; }    
+
+    public Lavatrice(string nome, int costo, int tempo, string detersivo, string ammorbidente)
+    {
+        this.nome = nome;
+        this.costo = costo;
+        this.tempo = tempo;
+        this.detersivo = detersivo;
+        this.ammorbidente = ammorbidente;
+    }
 }
 
+public class Lavanderia
+{
+    private Lavatrice[] lavatriciPresenti;
+    public Lavanderia()
+    {       
+        lavatriciPresenti = new Lavatrice[5];
+    }
+    public int numeroLavatriciPresenti;
+
+
+}
